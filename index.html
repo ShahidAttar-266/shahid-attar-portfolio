@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahid Attar - Designer & Founder</title>
+    
+    <!-- Tailwind CSS (CDN for Development) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#141617',
+                            white: '#eaeaea',
+                            gray: '#333333',
+                            light: '#dbdbdb',
+                            accent: '#2d60ce',
+                            'accent-dark': '#434549'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"General Sans"', 'Inter', 'sans-serif'],
+                        display: ['"Clash Display"', 'sans-serif'],
+                        hand: ['"Gloria Hallelujah"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- GSAP & Lenis -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.35/dist/lenis.min.js"></script>
+</head>
+<body class="bg-brand-white text-brand-black overflow-x-hidden antialiased">
+    <!-- Preloader -->
+    <div id="custom-preloader" class="fixed inset-0 w-full h-full bg-black text-white text-4xl sm:text-6xl font-bold flex items-center justify-center z-[999999]">
+        <div class="preloader-text overflow-hidden">
+            <span class="inline-block transform translate-y-full">Shahid Attar.</span>
+        </div>
+    </div>
+    
+    <!-- W. Badge -->
+    <div class="fixed hidden lg:flex left-0 top-[60vh] -translate-y-1/2 flex-col items-center bg-[#141617] text-white py-6 px-1.5 z-50">
+        <span class="font-bold text-lg mb-8">W.</span>
+        <span class="text-xs uppercase tracking-[0.2em] [writing-mode:vertical-rl] rotate-180 text-gray-400">Nominee</span>
+    </div>
+
+    <!-- Floating Bottom Nav -->
+    <nav class="fixed bottom-4 md:bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-[#141617] text-white rounded-full px-2 md:px-3 py-2 flex items-center justify-between gap-3 md:gap-6 shadow-[0_20px_40px_rgba(0,0,0,0.6)] border border-gray-800 w-[92vw] max-w-max overflow-x-auto">
+        <a href="#" class="w-8 h-8 md:w-10 md:h-10 shrink-0 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors relative md:mr-2">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <div class="hidden md:block absolute right-[-8px] top-1/2 -translate-y-1/2 w-px h-5 bg-white/20"></div>
+        </a>
+        <a href="#skills" class="text-[11px] md:text-sm font-medium hover:text-gray-300 transition-colors whitespace-nowrap hidden sm:block">Skills</a>
+        <a href="#about" class="text-[11px] md:text-sm font-medium hover:text-gray-300 transition-colors whitespace-nowrap">About</a>
+        <a href="#portfolio" class="text-[11px] md:text-sm font-medium hover:text-gray-300 transition-colors flex items-center gap-1 whitespace-nowrap">Portfolio <svg width="10" height="10" viewBox="0 0 24 24" fill="none" class="stroke-current stroke-3 hidden md:block"><path d="M9 18l6-6-6-6"/></svg></a>
+        <a href="#reviews" class="text-[11px] md:text-sm font-medium hover:text-gray-300 transition-colors whitespace-nowrap pr-1 md:pr-4">Reviews</a>
+        <a href="#contact" class="bg-[#f1ae2a] text-black text-[11px] md:text-sm font-bold px-4 md:px-6 py-2 md:py-2.5 rounded-full hover:bg-opacity-90 transition-all whitespace-nowrap shrink-0">Contact me</a>
+    </nav>
+    
+    <!-- Main Content wrapper for Lenis -->
+    <main id="main-scroll">
+        <!-- Hero Section -->
+        <section class="hero relative w-full h-screen flex flex-col justify-center items-center px-4 md:px-12 overflow-hidden bg-brand-white pt-8 lg:pt-0">
+            <!-- Background Video -->
+            <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover -z-10 opacity-30 pointer-events-none mix-blend-multiply">
+                <source src="assets/istockphoto-966443088-640_adpp_is.mp4" type="video/mp4" />
+            </video>
+            
+            <div class="hero-content z-10 w-full max-w-[85rem] flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-6 md:gap-10">
+                
+                <!-- Left Text -->
+                <div class="flex-1 flex flex-col items-center lg:items-end text-center lg:text-right relative z-10">
+                    <span class="text-gray-500 font-medium text-[10px] md:text-sm lg:text-base mb-1 tracking-wider uppercase lg:translate-x-[-1rem]">Award Winning Creative Leader</span>
+                    <h1 class="font-display font-semibold text-[16vw] sm:text-[12vw] lg:text-[7.5vw] xl:text-[8vw] leading-none tracking-tighter text-brand-black uppercase lg:mr-[-1rem]">SHAHID</h1>
+                </div>
+                
+                <!-- Center Image Pill -->
+                <div class="flex-none w-[220px] h-[300px] sm:w-[280px] sm:h-[380px] lg:w-[350px] lg:h-[480px] rounded-[2rem] lg:rounded-[3rem] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.25)] lg:shadow-[0_30px_60px_rgba(0,0,0,0.4)] relative z-20 bg-[#DCE0DD] my-2 lg:my-0">
+                    <img src="assets/images/profile.png" alt="Shahid Attar" class="w-full h-full object-cover">
+                </div>
+                
+                <!-- Right Text -->
+                <div class="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left relative z-10">
+                    <span class="text-gray-500 font-medium text-[10px] md:text-sm lg:text-base mb-1 tracking-wider uppercase lg:translate-x-[1rem]">Designer & Founder</span>
+                    <h1 class="font-display font-semibold text-[16vw] sm:text-[12vw] lg:text-[7.5vw] xl:text-[8vw] leading-none tracking-tighter text-brand-black uppercase lg:ml-[-1rem]">ATTAR</h1>
+                    <div class="mt-2 lg:mt-4 text-gray-500 font-medium text-[10px] md:text-xs lg:text-sm tracking-wide flex justify-center lg:justify-start gap-1 w-full">
+                        <span>Skopje, Macedonia - </span>
+                        <span class="time-display">10:43 GMT+2</span>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Marquee Section -->
+        <div class="marquee-container w-full py-10 bg-brand-black text-white overflow-hidden flex relative whitespace-nowrap items-center font-display uppercase tracking-widest text-xl">
+            <div class="marquee-track flex gap-8 whitespace-nowrap items-center will-change-transform">
+                <span class="marquee-item">Creative at the core</span>
+                <span class="w-2 h-2 rounded-full bg-white"></span>
+                <span class="marquee-item">Innovative Design</span>
+                <span class="w-2 h-2 rounded-full bg-white"></span>
+                <span class="marquee-item">Creative at the core</span>
+                <span class="w-2 h-2 rounded-full bg-white"></span>
+                <span class="marquee-item">Innovative Design</span>
+                <span class="w-2 h-2 rounded-full bg-white"></span>
+                <span class="marquee-item">Creative at the core</span>
+                <span class="w-2 h-2 rounded-full bg-white"></span>
+                <span class="marquee-item">Innovative Design</span>
+                <span class="w-2 h-2 rounded-full bg-white"></span>
+                <span class="marquee-item">Creative at the core</span>
+                <span class="w-2 h-2 rounded-full bg-white"></span>
+                <span class="marquee-item">Innovative Design</span>
+            </div>
+        </div>
+
+        <!-- About Text Section -->
+        <section class="about-section pt-32 pb-20 px-6 md:px-12 bg-brand-white">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 md:gap-24">
+                <div class="flex-1">
+                    <h3 class="font-display text-4xl sm:text-5xl font-semibold tracking-tight uppercase leading-tight">
+                        Trusted by over <span class="text-brand-accent italic">130+ clients</span>
+                    </h3>
+                </div>
+                <div class="flex-1 flex flex-col gap-10">
+                    <p class="text-xl sm:text-2xl font-medium leading-relaxed text-brand-gray">
+                        I work with founders, product teams, companies and brands based on strategy and innovation. I set one goal, cut noise, and move.
+                    </p>
+                    <p class="text-xl sm:text-2xl font-medium leading-relaxed text-brand-gray">
+                        When the job is done, the result is live and measured, not just designed.
+                    </p>
+                    
+                    <button class="menu-btn w-fit mt-4 px-8 py-4 bg-brand-black text-white uppercase tracking-widest text-sm font-semibold rounded-full hover:bg-brand-accent transition-colors duration-300">
+                        About me
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section py-20 px-6 md:px-12 bg-brand-white w-full">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="font-display text-2xl uppercase font-semibold mb-16 text-brand-gray tracking-widest">What I do best?</h2>
+                <div class="services-list flex flex-col">
+                    <!-- Service 1 -->
+                    <div class="service-item w-full py-8 text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-semibold uppercase tracking-tighter border-t border-brand-light flex justify-between items-center group cursor-pointer hover:text-brand-accent transition-colors">
+                        <span class="transform transition-transform group-hover:translate-x-4">01. Web Design</span>
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="opacity-0 group-hover:opacity-100 transform -translate-x-4 group-hover:translate-x-0 transition-all">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="service-item w-full py-8 text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-semibold uppercase tracking-tighter border-t border-brand-light flex justify-between items-center group cursor-pointer hover:text-brand-accent transition-colors">
+                        <span class="transform transition-transform group-hover:translate-x-4">02. Product Design</span>
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="opacity-0 group-hover:opacity-100 transform -translate-x-4 group-hover:translate-x-0 transition-all">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="service-item w-full py-8 text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-semibold uppercase tracking-tighter border-t border-brand-light flex justify-between items-center group cursor-pointer hover:text-brand-accent transition-colors">
+                        <span class="transform transition-transform group-hover:translate-x-4">03. UI/UX Systems</span>
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="opacity-0 group-hover:opacity-100 transform -translate-x-4 group-hover:translate-x-0 transition-all">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <!-- Service 4 -->
+                    <div class="service-item w-full py-8 text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-semibold uppercase tracking-tighter border-t border-brand-light flex justify-between items-center group cursor-pointer hover:text-brand-accent transition-colors">
+                        <span class="transform transition-transform group-hover:translate-x-4">04. Visual Design</span>
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="opacity-0 group-hover:opacity-100 transform -translate-x-4 group-hover:translate-x-0 transition-all">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="w-full border-t border-brand-light"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Scrolling Cards Section -->
+        <section class="cards-section relative w-full bg-brand-black text-white py-32 rounded-t-[3rem] px-6 md:px-12">
+            <div class="cards-container max-w-6xl mx-auto">
+                <div class="text-center mb-24">
+                    <h2 class="font-display text-4xl sm:text-6xl font-semibold uppercase">Selected Work</h2>
+                </div>
+                <!-- Card 1 -->
+                <div class="card-pin sticky top-32 w-full max-w-4xl mx-auto h-[70vh] rounded-3xl overflow-hidden bg-brand-gray mb-20 origin-top shadow-2xl">
+                    <div class="card-content w-full h-full relative group">
+                        <img src="assets/images/p1.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Work 1">
+                        <div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/80 to-transparent">
+                            <h3 class="font-display text-3xl font-semibold uppercase tracking-widest">Web Design / Branding</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="card-pin sticky top-40 w-full max-w-4xl mx-auto h-[70vh] rounded-3xl overflow-hidden bg-brand-gray mb-20 origin-top shadow-2xl">
+                    <div class="card-content w-full h-full relative group">
+                        <img src="assets/images/p2.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Work 2">
+                        <div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/80 to-transparent">
+                            <h3 class="font-display text-3xl font-semibold uppercase tracking-widest">App UI / UX</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="card-pin sticky top-48 w-full max-w-4xl mx-auto h-[70vh] rounded-3xl overflow-hidden bg-brand-gray mb-20 origin-top shadow-2xl">
+                    <div class="card-content w-full h-full relative group">
+                        <img src="assets/images/p3.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Work 3">
+                        <div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/80 to-transparent">
+                            <h3 class="font-display text-3xl font-semibold uppercase tracking-widest">Visual Identity / Print</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section class="experience-section py-32 px-6 md:px-12 bg-default text-brand-black w-full bg-[#f3f3f3]">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row gap-16 md:gap-24">
+                    <div class="w-full md:w-1/3">
+                        <h2 class="font-display text-4xl font-semibold uppercase tracking-widest">Work <br> Experience</h2>
+                    </div>
+                    <div class="w-full md:w-2/3 flex flex-col pt-4">
+                        <div class="border-t border-brand-gray py-6 flex justify-between uppercase tracking-widest text-sm lg:text-base cursor-pointer hover:bg-white hover:px-4 transition-all duration-300">
+                            <span class="font-bold">Creative Director</span>
+                            <span>2023 - Present</span>
+                        </div>
+                        <div class="border-t border-brand-gray py-6 flex justify-between uppercase tracking-widest text-sm lg:text-base cursor-pointer hover:bg-white hover:px-4 transition-all duration-300">
+                            <span class="font-bold">Head of Design</span>
+                            <span>2020 - 2023</span>
+                        </div>
+                        <div class="border-t border-brand-gray py-6 flex justify-between uppercase tracking-widest text-sm lg:text-base cursor-pointer hover:bg-white hover:px-4 transition-all duration-300">
+                            <span class="font-bold">Senior UI/UX Designer</span>
+                            <span>2018 - 2020</span>
+                        </div>
+                        <div class="border-t border-b border-brand-gray py-6 flex justify-between uppercase tracking-widest text-sm lg:text-base cursor-pointer hover:bg-white hover:px-4 transition-all duration-300">
+                            <span class="font-bold">Web Designer</span>
+                            <span>2015 - 2018</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section py-20 px-6 md:px-12 bg-white text-brand-black w-full">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="font-display text-3xl md:text-5xl font-semibold uppercase tracking-tighter">Frequently Asked Questions</h2>
+            </div>
+            <div class="max-w-4xl mx-auto flex flex-col gap-6">
+                <div class="border border-brand-light p-8 rounded-2xl">
+                    <h4 class="font-display text-xl font-semibold uppercase mb-4">How can I help?</h4>
+                    <p class="text-brand-gray font-medium leading-relaxed">I offer a wide range of creative and digital services. From web design and product design to full UI/UX systems and visual design. We take your ideas and turn them into functional, aesthetic, and fully live products.</p>
+                </div>
+                <div class="border border-brand-light p-8 rounded-2xl">
+                    <h4 class="font-display text-xl font-semibold uppercase mb-4">What is your typical process?</h4>
+                    <p class="text-brand-gray font-medium leading-relaxed">Discovery and strategy come first. We then move into wireframing, UI concepting, design, and finally development. After thorough testing, we launch a fully optimized digital product.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Contact Section -->
+        <footer class="footer-section bg-brand-black text-white pt-32 pb-10 px-6 md:px-12 rounded-t-[3rem] mt-10">
+            <div class="max-w-7xl mx-auto flex flex-col gap-10 items-center justify-center text-center">
+                <h2 class="font-display text-[10vw] md:text-[8vw] font-bold uppercase tracking-tighter leading-none hover:text-brand-accent transition-colors duration-500 cursor-pointer">
+                    Let's work<br>together ✱
+                </h2>
+                
+                <div class="flex gap-4 md:gap-8 mt-10">
+                    <a href="#" class="w-16 h-16 rounded-full border border-gray-600 flex items-center justify-center hover:bg-white hover:text-black transition-all">FB</a>
+                    <a href="#" class="w-16 h-16 rounded-full border border-gray-600 flex items-center justify-center hover:bg-white hover:text-black transition-all">IN</a>
+                    <a href="#" class="w-16 h-16 rounded-full border border-gray-600 flex items-center justify-center hover:bg-white hover:text-black transition-all">TW</a>
+                    <a href="#" class="w-16 h-16 rounded-full border border-gray-600 flex items-center justify-center hover:bg-white hover:text-black transition-all">LI</a>
+                </div>
+
+                <div class="w-full border-t border-gray-800 mt-20 pt-10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 font-medium">
+                    <p>&copy; 2026 Shahid Attar. All rights reserved.</p>
+                    <p>Designed and Built in Skopje, MK</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
